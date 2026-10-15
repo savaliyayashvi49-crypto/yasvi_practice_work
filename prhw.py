@@ -1,12 +1,18 @@
-import turtle
-t = turtle.Turtle()
-t.screen.bgcolor("black")
-t.speed(0)
-t.pensize(1)
-colors = ["pink", "hotpink", "deeppink", "palevioletred"]
-for x in range(150):
-    t.color(colors[x % 4])
-    t.circle(x)
-t.left(30)
-t.hideturtle()
-turtle.done()
+from turtle import *
+from colorsys import *
+setposition(0, -100)
+tracer(10)
+bgcolor("black")
+h = 0
+for i in range(90):
+    h += 0.0015
+    color(hsv_to_rgb(h , 1, 1))
+    lt(50)
+    for j in range(7):
+        fd(340)
+        lt(100)
+        circle(5)
+    right(90)
+    circle(10)
+    hideturtle()
+done()
